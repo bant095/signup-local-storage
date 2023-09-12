@@ -1,9 +1,10 @@
-//DOM
+//Sign Up
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Preventing the form from actually submitting
+    event.preventDefault(); // Prevent the form from actually submitting
 
     // To Get values from my form fields
     const firstName = document.getElementById("first_name").value;
@@ -30,5 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Displaying a success message for my form
     alert("SUCCESS");
+    formData.reset();
+  });
+});
+
+//================
+//Sign In
+
+document.addEventListener("DOMContentLoaded", function () {
+  const formSignIn = document.getElementById("formSignIn");
+
+  formSignIn.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from actually submitting
+
+    // To Get values from my form fields
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Using an bject to store the form data
+    const SignInData = {
+      email,
+      password,
+    };
+
+    // I Store the form data in the localStorage
+    localStorage.setItem("SignInData", JSON.stringify(SignInData));
+
+    // Displaying a success message for my form
+    alert("YOU HAVE SUCCESSFUL SIGN IN");
+
+    SignInData.reset();
   });
 });
