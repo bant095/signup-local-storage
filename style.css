@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.form {
+  margin: 0 50px;
+}
+
+h1 {
+  margin: 50px;
+  color: green;
+}
+
+input {
+  width: 300px;
+  padding: 7px;
+  margin-bottom: 20px;
+}
+
+#submit {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 700;
+}
+
+p {
+  padding: 0 50px 30px 50px;
+}
